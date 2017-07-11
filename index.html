@@ -397,6 +397,7 @@ function animatesmall() {
 }
 function gettxid() {
   animatesmall()
+  var data = document.getElementById("datafrom")
 	var unconfirmed1 = document.getElementById("unconfirmed")
 	var memtext = document.getElementById("memcount")
 	var yourfees = document.getElementById("yourfees")
@@ -406,6 +407,7 @@ function gettxid() {
 	var maxtext = document.getElementById("maxminutes")
 	var spinner1 = document.getElementById("spinner1")
 	var spinner2 = document.getElementById("spinner2")
+  data.style.visibility = "hidden"
 	mintext.style.visibility = "hidden"
 	maxtext.style.visibility = "hidden"
 	spinner1.style.visibility = "visible"
@@ -436,6 +438,8 @@ function gettxid() {
 		yourfees.style.visibility = "hidden"
 		memtext.style.visibility = "hidden"
 		unconfirmed1.style.visibility = "hidden"
+    data.style.visibility = "hidden"
+
 	}
 	if (txid == "") {
 		button.style.visibility = "visible"
@@ -447,6 +451,8 @@ function gettxid() {
 		yourfees.style.visibility = "hidden"
 		memtext.style.visibility = "hidden"
 		unconfirmed1.style.visibility = "hidden"
+    data.style.visibility = "hidden"
+
 	}
 };
 xhttp.open("GET", url, true);
@@ -468,6 +474,7 @@ xhttp.open("GET", "https://api.blockcypher.com/v1/btc/main", true);
 xhttp.send();
 }
 function calculate(fee) {
+  var data = document.getElementById("datafrom")
 	var unconfirmed = document.getElementById("unconfirmed")
 	var button = document.getElementById("subid")
 	button.style.visibility = "hidden"
@@ -508,6 +515,7 @@ function calculate(fee) {
 		mintext.style.visibility = "visible"
 		maxtext.style.visibility = "visible"
 		unconfirmed.style.visibility = "visible"
+    data.style.visibility = "visible"
 
 
 	} else if (this.readyState == 4 && this.status != 200) {
@@ -521,6 +529,8 @@ function calculate(fee) {
 		yourfees.style.visibility = "hidden"
 		memtext.style.visibility = "hidden"
 		unconfirmed.style.visibility = "hidden"
+    data.style.visibility = "hidden"
+
 
 	}
   animate()
