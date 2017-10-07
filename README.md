@@ -3,4 +3,4 @@ Input txid -> tells you how long until your transaction will be confirmed depend
 
 TO DO:
 
-* UI
+* Responsive
